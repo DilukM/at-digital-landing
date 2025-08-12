@@ -1,5 +1,3 @@
-
-
 // export default function ServiceCard({
 //   image,
 //   title,
@@ -39,11 +37,13 @@ export default function ServiceCard({
       {/* Mobile Layout - Stacked vertically for screens 375px and below */}
       <div className="flex flex-col items-center text-center sm:hidden">
         <div className="mb-6 w-full max-w-xs">
-          <img src={image} alt={imageAlt} className="w-24 h-24 mx-auto" />
+          <img src={image} alt={imageAlt} className="w-4/5 h-4/5 mx-auto" />
         </div>
         <div className="w-full">
           <h2 className="mb-4 text-lg font-semibold px-2">{title}</h2>
-          <p className="text-text mb-6 leading-relaxed text-sm px-2">{description}</p>
+          <p className="text-text mb-6 leading-relaxed text-sm px-2">
+            {description}
+          </p>
           <Button label="LEARN MORE" variant="secondary" />
         </div>
       </div>
@@ -52,7 +52,11 @@ export default function ServiceCard({
       <div className="hidden sm:flex items-center gap-6 lg:gap-12">
         {imagePosition === "left" && (
           <div className="flex-shrink-0">
-            <img src={image} alt={imageAlt} className="w-32 h-32 lg:w-40 lg:h-40" />
+            <img
+              src={image}
+              alt={imageAlt}
+              className="w-32 h-32 lg:w-5/6 lg:h-5/6"
+            />
           </div>
         )}
         <div className="flex-1 min-w-0">
@@ -62,7 +66,11 @@ export default function ServiceCard({
         </div>
         {imagePosition === "right" && (
           <div className="flex-shrink-0">
-            <img src={image} alt={imageAlt} className="w-32 h-32 lg:w-40 lg:h-40" />
+            <img
+              src={image}
+              alt={imageAlt}
+              className="w-32 h-32 lg:w-5/6 lg:h-5/6"
+            />
           </div>
         )}
       </div>

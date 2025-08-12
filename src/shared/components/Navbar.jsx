@@ -10,7 +10,7 @@ export default function Navbar() {
         <img src={Logo} alt="at digital" className="h-8" />
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex gap-6 text-accent1 text-sm font-medium">
+        <ul className="hidden sm:flex gap-6 text-accent1 text-sm font-medium">
           <li>
             <a href="#" className="hover:text-white transition-colors">
               SERVICES
@@ -35,7 +35,7 @@ export default function Navbar() {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-white"
+          className="sm:hidden text-white"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
         >

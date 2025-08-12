@@ -3,8 +3,8 @@ import Logo from "../../assets/logo.svg"; // Assuming you have a logo image
 
 export default function Footer() {
   return (
-    <footer className="bg-primary text-white px-16 py-8">
-      <div className="max-w-7xl mx-auto">
+    <footer className="bg-primary text-white px-4 sm:px-16 py-8">
+      <div className="mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 mb-12">
           {/* Logo and Description */}
           <div className="lg:col-span-2">
@@ -57,7 +57,7 @@ export default function Footer() {
         </div>
 
         {/* Footer Bottom with Divider */}
-        <div className="border-t-2 border-white pt-6 mx-100">
+        <div className="border-t-2 border-white pt-6 lg:mx-100">
           <div className="flex justify-center space-x-8 text-white">
             <a href="#" className="hover:text-secondary transition-colors">
               Privacy Policy
