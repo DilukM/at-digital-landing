@@ -35,34 +35,34 @@ export default function ServiceCard({
   imagePosition = "left",
 }) {
   return (
-    <div className="w-full  mx-auto p-6">
+    <div className="w-full max-w-6xl mx-auto px-4 py-6 overflow-hidden">
       {/* Mobile Layout - Stacked vertically for screens 375px and below */}
-      <div className="block sm:hidden flex-col items-center text-center">
-        <div className="mb-6">
+      <div className="flex flex-col items-center text-center sm:hidden">
+        <div className="mb-6 w-full max-w-xs">
           <img src={image} alt={imageAlt} className="w-24 h-24 mx-auto" />
         </div>
-        <div>
-          <h2 className="mb-4 text-xl font-semibold">{title}</h2>
-          <p className="text-text mb-6 leading-relaxed">{description}</p>
+        <div className="w-full">
+          <h2 className="mb-4 text-lg font-semibold px-2">{title}</h2>
+          <p className="text-text mb-6 leading-relaxed text-sm px-2">{description}</p>
           <Button label="LEARN MORE" variant="secondary" />
         </div>
       </div>
 
       {/* Desktop/Tablet Layout - Side by side for screens above 375px */}
-      <div className="hidden sm:flex items-center gap-8 mx-30">
+      <div className="hidden sm:flex items-center gap-6 lg:gap-12">
         {imagePosition === "left" && (
           <div className="flex-shrink-0">
-            <img src={image} alt={imageAlt} className="w-32 h-32 lg:w-80 lg:h-80" />
+            <img src={image} alt={imageAlt} className="w-32 h-32 lg:w-40 lg:h-40" />
           </div>
         )}
-        <div className="flex-1">
+        <div className="flex-1 min-w-0">
           <h2 className="mb-4 text-xl lg:text-2xl font-semibold">{title}</h2>
           <p className="text-text mb-6 leading-relaxed">{description}</p>
           <Button label="LEARN MORE" variant="secondary" />
         </div>
         {imagePosition === "right" && (
           <div className="flex-shrink-0">
-            <img src={image} alt={imageAlt} className="w-32 h-32 lg:w-80 lg:h-80" />
+            <img src={image} alt={imageAlt} className="w-32 h-32 lg:w-40 lg:h-40" />
           </div>
         )}
       </div>

@@ -10,11 +10,11 @@ import strategyImg from "../../../assets/magnifier.svg";
 
 export default function LandingPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen w-full overflow-x-hidden">
       <Navbar />
       <Banner />
-      <section className="px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
-        <div className="space-y-8 sm:space-y-12 lg:space-y-16">
+      <section className="w-full px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+        <div className="space-y-8 sm:space-y-12 lg:space-y-16 w-full">
           <ServiceCard
             image={webDevImg}
             title="Web & Mobile App Development"
