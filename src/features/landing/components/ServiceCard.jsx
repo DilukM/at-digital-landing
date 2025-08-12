@@ -36,8 +36,12 @@ export default function ServiceCard({
     <div className="w-full max-w-6xl mx-auto px-4 py-6 overflow-hidden">
       {/* Mobile Layout - Stacked vertically for screens 375px and below */}
       <div className="flex flex-col items-center text-center sm:hidden">
-        <div className="mb-6 w-full max-w-xs">
-          <img src={image} alt={imageAlt} className="w-4/5 h-4/5 mx-auto" />
+        <div className="mb-6 w-full max-w-xs overflow-hidden">
+          <img 
+            src={image} 
+            alt={imageAlt} 
+            className="w-4/5 h-4/5 mx-auto transition-transform duration-300 hover:-translate-y-2" 
+          />
         </div>
         <div className="w-full">
           <h2 className="mb-4 text-lg font-semibold px-2">{title}</h2>
@@ -51,11 +55,11 @@ export default function ServiceCard({
       {/* Desktop/Tablet Layout - Side by side for screens above 375px */}
       <div className="hidden sm:flex items-center gap-6 lg:gap-12">
         {imagePosition === "left" && (
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 overflow-hidden">
             <img
               src={image}
               alt={imageAlt}
-              className="w-48 h-48 md:w-5/6 md:h-5/6"
+              className="w-48 h-48 md:w-5/6 md:h-5/6 transition-transform duration-300 hover:-translate-y-2"
             />
           </div>
         )}
@@ -65,11 +69,11 @@ export default function ServiceCard({
           <Button label="LEARN MORE" variant="secondary" />
         </div>
         {imagePosition === "right" && (
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 overflow-hidden">
             <img
               src={image}
               alt={imageAlt}
-              className="w-48 h-48 md:w-5/6 md:h-5/6"
+              className="w-48 h-48 md:w-5/6 md:h-5/6 transition-transform duration-300 hover:-translate-y-2"
             />
           </div>
         )}

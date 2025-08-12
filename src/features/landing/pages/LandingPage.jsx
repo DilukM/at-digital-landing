@@ -39,7 +39,7 @@ export default function LandingPage() {
           />
         </div>
       </section>
-      <section className="px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 flex flex-col items-center bg-gray-50">
+      <section className="px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 flex flex-col items-center">
         <div className="w-full max-w-4xl">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-primary mb-8 sm:mb-12">
             Frequently Asked Questions

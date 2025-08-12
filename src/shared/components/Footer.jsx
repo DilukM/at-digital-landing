@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Logo from "../../assets/logo.svg"; // Assuming you have a logo image
 
 export default function Footer() {
@@ -60,13 +61,16 @@ export default function Footer() {
 
         <hr className="border-t-2 border-white  lg:mx-60 md:mx-40 sm:mx-4 mb-6" />
         <div className="flex justify-center space-x-8 text-white">
-          <a href="#" className="hover:text-secondary transition-colors">
+          <Link
+            to="/privacy"
+            className="hover:text-accent1 transition-colors"
+          >
             Privacy Policy
-          </a>
+          </Link>
           <span className="text-white">|</span>
-          <a href="#" className="hover:text-secondary transition-colors">
+          <Link to="/terms" className="hover:text-accent1 transition-colors">
             Terms & Conditions
-          </a>
+          </Link>
         </div>
       </div>
     </footer>

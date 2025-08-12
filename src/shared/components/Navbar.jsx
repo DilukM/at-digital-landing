@@ -1,41 +1,75 @@
 import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import Logo from "../../assets/logo.svg"; // Assuming you have a logo image
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+
+  const handleMenuClose = () => {
+    setIsMenuOpen(false);
+  };
+
+  const isActive = (path) => {
+    return location.pathname === path;
+  };
 
   return (
     <nav className="bg-primary text-white relative z-10">
       <div className="flex justify-between items-center px-4 sm:px-6 lg:px-8 py-4">
-        <img src={Logo} alt="at digital" className="h-8" />
+        <Link to="/" onClick={handleMenuClose}>
+          <img src={Logo} alt="at digital" className="h-8" />
+        </Link>
 
         {/* Desktop Menu */}
         <ul className="hidden sm:flex gap-6 text-white text-sm font-medium">
           <li>
-            <a href="#" className="hover:text-accent1 transition-colors">
+            <Link
+              to="/services"
+              className={`hover:text-accent1 transition-colors ${
+                isActive("/services") ? "text-accent1" : ""
+              }`}
+            >
               SERVICES
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="hover:text-accent1 transition-colors">
+            <Link
+              to="/about"
+              className={`hover:text-accent1 transition-colors ${
+                isActive("/about") ? "text-accent1" : ""
+              }`}
+            >
               ABOUT US
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="hover:text-accent1 transition-colors">
+            <Link
+              to="/contact"
+              className={`hover:text-accent1 transition-colors ${
+                isActive("/contact") ? "text-accent1" : ""
+              }`}
+            >
               CONTACT US
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="hover:text-accent1 transition-colors">
+            <Link
+              to="/careers"
+              className={`hover:text-accent1 transition-colors ${
+                isActive("/careers") ? "text-accent1" : ""
+              }`}
+            >
               CAREERS
-            </a>
+            </Link>
           </li>
         </ul>
 
         {/* Mobile Menu Button */}
         <button
-          className={`sm:hidden z-20 ${isMenuOpen ? 'text-black' : 'text-white'}`}
+          className={`sm:hidden z-20 ${
+            isMenuOpen ? "text-black" : "text-white"
+          }`}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -49,7 +83,9 @@ export default function Navbar() {
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth={2}
-              d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
+              d={
+                isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"
+              }
             />
           </svg>
         </button>
@@ -60,24 +96,48 @@ export default function Navbar() {
         <div className="sm:hidden fixed inset-0 bg-white z-10">
           <ul className="px-8 pt-16 space-y-8 text-text text-xl font-medium">
             <li>
-              <a href="#" className="block hover:text-primary transition-colors">
+              <Link
+                to="/services"
+                className={`block hover:text-primary transition-colors ${
+                  isActive("/services") ? "text-primary" : ""
+                }`}
+                onClick={handleMenuClose}
+              >
                 SERVICES
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="block hover:text-primary transition-colors">
+              <Link
+                to="/about"
+                className={`block hover:text-primary transition-colors ${
+                  isActive("/about") ? "text-primary" : ""
+                }`}
+                onClick={handleMenuClose}
+              >
                 ABOUT US
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="block hover:text-primary transition-colors">
+              <Link
+                to="/contact"
+                className={`block hover:text-primary transition-colors ${
+                  isActive("/contact") ? "text-primary" : ""
+                }`}
+                onClick={handleMenuClose}
+              >
                 CONTACT US
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="block hover:text-primary transition-colors">
+              <Link
+                to="/careers"
+                className={`block hover:text-primary transition-colors ${
+                  isActive("/careers") ? "text-primary" : ""
+                }`}
+                onClick={handleMenuClose}
+              >
                 CAREERS
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
