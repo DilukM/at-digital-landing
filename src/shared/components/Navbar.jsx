@@ -1,15 +1,19 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import Logo from "../../assets/logo.svg"; // Assuming you have a logo image
+import Logo from "../../assets/logo.svg";
 
 export default function Navbar() {
+  // State to track if mobile menu is open or closed
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  // Get current location from React Router
   const location = useLocation();
 
+  // Closes the mobile menu
   const handleMenuClose = () => {
     setIsMenuOpen(false);
   };
 
+  // Check the active navigation links
   const isActive = (path) => {
     return location.pathname === path;
   };

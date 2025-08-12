@@ -1,27 +1,3 @@
-// export default function ServiceCard({
-//   image,
-//   title,
-//   description,
-//   imageAlt,
-//   imagePosition = "left",
-// }) {
-//   return (
-//     <div className="flex items-center gap-6 p-6 w-4/5">
-//       {imagePosition === "left" && (
-//         <img src={image} alt={imageAlt} className="w-100 h-100 mr-10" />
-//       )}
-//       <div>
-//         <h2 className="mb-2">{title}</h2>
-//         <p className="text-text mb-4">{description}</p>
-//         <Button label="LEARN MORE" variant="secondary" />
-//       </div>
-//       {imagePosition === "right" && (
-//         <img src={image} alt={imageAlt} className="w-100 h-100 ml-10" />
-//       )}
-//     </div>
-//   );
-// }
-
 import React from "react";
 import Button from "../../../shared/components/Button";
 
@@ -34,7 +10,7 @@ export default function ServiceCard({
 }) {
   return (
     <div className="w-full max-w-6xl mx-auto px-4 py-6 overflow-hidden">
-      {/* Mobile Layout - Stacked vertically for screens 375px and below */}
+      {/* Mobile Layout */}
       <div className="flex flex-col items-center text-center sm:hidden">
         <div className="mb-6 w-full max-w-xs overflow-hidden">
           <img 
@@ -52,7 +28,7 @@ export default function ServiceCard({
         </div>
       </div>
 
-      {/* Desktop/Tablet Layout - Side by side for screens above 375px */}
+      {/* Desktop/Tablet Layout*/}
       <div className="hidden sm:flex items-center gap-6 lg:gap-12">
         {imagePosition === "left" && (
           <div className="flex-shrink-0 overflow-hidden">

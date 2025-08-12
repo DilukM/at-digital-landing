@@ -10,6 +10,7 @@ export default function Button({ label, onClick, variant = "primary" }) {
       "bg-secondary text-white hover:scale-105 transition-transform duration-200 ease-in-out",
   };
 
+  // Render a button with the styles based on the variant
   return (
     <button className={`${base} ${styles[variant]}`} onClick={onClick}>
       {label}

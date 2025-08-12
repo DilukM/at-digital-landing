@@ -1,8 +1,9 @@
 import React from "react";
 import Navbar from "../../../shared/components/Navbar";
+import Footer from "../../../shared/components/Footer";
+
 import Banner from "../components/Banner";
 import FAQItem from "../components/FaqItem";
-import Footer from "../../../shared/components/Footer";
 import ServiceCard from "../components/ServiceCard";
 
 import webDevImg from "../../../assets/computer.svg";
@@ -10,11 +11,18 @@ import strategyImg from "../../../assets/magnifier.svg";
 
 export default function LandingPage() {
   return (
+    // Main container
     <div className="min-h-screen w-full overflow-x-hidden">
+      {/* Navigation at the top */}
       <Navbar />
+
+      {/* Hero section with the main call-to-action */}
       <Banner />
+
+      {/* Services section*/}
       <section className="w-full px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
         <div className="space-y-8 sm:space-y-12 lg:space-y-16 w-full">
+          {/* First service card */}
           <ServiceCard
             image={webDevImg}
             title="Web & Mobile App Development"
@@ -26,6 +34,7 @@ export default function LandingPage() {
             imagePosition="left"
           />
 
+          {/* Second service card */}
           <ServiceCard
             image={strategyImg}
             title="Digital Strategy Consulting"
@@ -39,11 +48,15 @@ export default function LandingPage() {
           />
         </div>
       </section>
+      {/* FAQ section */}
       <section className="px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 flex flex-col items-center">
         <div className="w-full max-w-4xl">
+          {/* Section heading */}
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-primary mb-8 sm:mb-12">
             Frequently Asked Questions
           </h2>
+
+          {/* FAQ items container */}
           <div className="space-y-4">
             <FAQItem
               question="Lorem ipsum dolor sit amet consectetur. Leo at sit eu libero?"
@@ -63,6 +76,8 @@ ultrices nulla faucibus odio est sed aliquam. Sapien massa morbi risus sagittis 
           </div>
         </div>
       </section>
+
+      {/* Footer section */}
       <Footer />
     </div>
   );

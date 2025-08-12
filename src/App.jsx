@@ -10,11 +10,16 @@ import TermsPage from "./features/terms/pages/TermsPage";
 function App() {
   return (
     <Routes>
+      {/* Main landing page route */}
       <Route path="/" element={<LandingPage />} />
+      
+      {/* Main site sections */}
       <Route path="/services" element={<ServicesPage />} />
       <Route path="/about" element={<AboutPage />} />
       <Route path="/contact" element={<ContactPage />} />
       <Route path="/careers" element={<CareersPage />} />
+      
+      {/* Legal pages */}
       <Route path="/privacy" element={<PrivacyPage />} />
       <Route path="/terms" element={<TermsPage />} />
     </Routes>
