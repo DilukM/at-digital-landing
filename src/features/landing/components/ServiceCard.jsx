@@ -55,7 +55,7 @@ export default function ServiceCard({
             <img
               src={image}
               alt={imageAlt}
-              className="w-32 h-32 lg:w-5/6 lg:h-5/6"
+              className="w-48 h-48 md:w-5/6 md:h-5/6"
             />
           </div>
         )}
@@ -69,7 +69,7 @@ export default function ServiceCard({
             <img
               src={image}
               alt={imageAlt}
-              className="w-32 h-32 lg:w-5/6 lg:h-5/6"
+              className="w-48 h-48 md:w-5/6 md:h-5/6"
             />
           </div>
         )}

@@ -10,24 +10,24 @@ export default function Navbar() {
         <img src={Logo} alt="at digital" className="h-8" />
 
         {/* Desktop Menu */}
-        <ul className="hidden sm:flex gap-6 text-accent1 text-sm font-medium">
+        <ul className="hidden sm:flex gap-6 text-white text-sm font-medium">
           <li>
-            <a href="#" className="hover:text-white transition-colors">
+            <a href="#" className="hover:text-accent1 transition-colors">
               SERVICES
             </a>
           </li>
           <li>
-            <a href="#" className="hover:text-white transition-colors">
+            <a href="#" className="hover:text-accent1 transition-colors">
               ABOUT US
             </a>
           </li>
           <li>
-            <a href="#" className="hover:text-white transition-colors">
+            <a href="#" className="hover:text-accent1 transition-colors">
               CONTACT US
             </a>
           </li>
           <li>
-            <a href="#" className="hover:text-white transition-colors">
+            <a href="#" className="hover:text-accent1 transition-colors">
               CAREERS
             </a>
           </li>
