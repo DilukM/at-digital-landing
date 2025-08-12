@@ -1,9 +1,10 @@
-import React from 'react';
+import React from "react";
+import Logo from "../../assets/logo.svg"; // Assuming you have a logo image
 
 export default function Navbar() {
   return (
     <nav className="bg-primary text-white flex justify-between items-center px-8 py-4">
-      <div className="text-xl font-bold">at digital</div>
+      <img src={Logo} alt="Logo" className="h-8" />
       <ul className="flex gap-6 text-accent1">
         <li className="hover:text-secondary cursor-pointer">Services</li>
         <li className="hover:text-secondary cursor-pointer">About Us</li>
