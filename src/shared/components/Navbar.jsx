@@ -5,7 +5,7 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-primary text-white">
+    <nav className="bg-primary text-white relative z-10">
       <div className="flex justify-between items-center px-4 sm:px-6 lg:px-8 py-4">
         <img src={Logo} alt="at digital" className="h-8" />
 
@@ -35,7 +35,7 @@ export default function Navbar() {
 
         {/* Mobile Menu Button */}
         <button
-          className="sm:hidden text-white"
+          className={`sm:hidden z-20 ${isMenuOpen ? 'text-black' : 'text-white'}`}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -49,33 +49,33 @@ export default function Navbar() {
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth={2}
-              d="M4 6h16M4 12h16M4 18h16"
+              d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
             />
           </svg>
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu Overlay */}
       {isMenuOpen && (
-        <div className="md:hidden bg-primary border-t border-analogous1">
-          <ul className="px-4 py-4 space-y-4 text-accent1 text-sm font-medium">
+        <div className="sm:hidden fixed inset-0 bg-white z-10">
+          <ul className="px-8 pt-16 space-y-8 text-text text-xl font-medium">
             <li>
-              <a href="#" className="block hover:text-white transition-colors">
+              <a href="#" className="block hover:text-primary transition-colors">
                 SERVICES
               </a>
             </li>
             <li>
-              <a href="#" className="block hover:text-white transition-colors">
+              <a href="#" className="block hover:text-primary transition-colors">
                 ABOUT US
               </a>
             </li>
             <li>
-              <a href="#" className="block hover:text-white transition-colors">
+              <a href="#" className="block hover:text-primary transition-colors">
                 CONTACT US
               </a>
             </li>
             <li>
-              <a href="#" className="block hover:text-white transition-colors">
+              <a href="#" className="block hover:text-primary transition-colors">
                 CAREERS
               </a>
             </li>
