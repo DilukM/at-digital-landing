@@ -14,16 +14,20 @@
   --color-accent2: #fff8e0;
   --color-error: #ff0335;
   --color-success: #5eb30b;
+  --color-faq-bg: #FAF8FF;
+
+  --font-family-inter: "Inter", sans-serif;
+  --font-family-poppins: "Poppins", sans-serif;
 }
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Inter", sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  font-size: 16px;
 
   color-scheme: light dark;
-
-  background-color: #242424;
+  background-color: #ffffff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -32,12 +36,12 @@
 }
 
 a {
+  font-family: "Inter";
   font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+  font-style: Medium;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
 }
 
 body {
@@ -51,6 +55,30 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+h2 {
+  font-family: "Poppins";
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 33px;
+  color: var(--color-primary);
+}
+h3 {
+  color: var(--color-primary);
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 28px;
+  letter-spacing: 0px;
+}
+h4 {
+  font-family: "Inter";
+  font-weight: 600;
+  font-style: Semi Bold;
+  font-size: 21px;
+  line-height: 100%;
+  letter-spacing: 0%;
 }
 
 button {
