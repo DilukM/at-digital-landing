@@ -12,12 +12,20 @@ export default function FAQItem({ question, answer }) {
           className="flex justify-between items-center p-4 sm:p-6 cursor-pointer"
           onClick={() => setOpen(!open)}
         >
-          <h3 className="text-sm sm:text-base lg:text-lg font-medium text-text pr-4 flex-1">
+          <h3
+            className={`text-sm sm:text-base lg:text-lg font-medium ${
+              open ? "text-primary" : "text-text"
+            } pr-4 flex-1`}
+          >
             {question}
           </h3>
-        
+
           <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center">
-            <span className="text-xl sm:text-2xl font-light text-primary">
+            <span
+              className={`text-xl sm:text-2xl font-light ${
+                open ? "text-primary" : "text-text"
+              }`}
+            >
               {open ? "−" : "+"}
             </span>
           </div>
